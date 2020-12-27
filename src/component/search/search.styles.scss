@@ -1,7 +1,7 @@
 @mixin fontCss {
   font-size: 30px;
   line-height: 70px;
-  font-family: Roboto Slab, sans-serif;
+  font-family: "MarckScript-Regular";
 }
 
 .input-wrapper {
@@ -17,7 +17,7 @@ input {
   padding: 0;
   border-radius: 0;
   background-color: transparent;
-  color: white;
+  color: black;
   border: none;
   outline: none;
   border-bottom: 3px solid #333333;
@@ -25,7 +25,7 @@ input {
 
   &:focus {
     + .input-highlight {
-      border-top: 3px solid #fbc91b;
+      border-top: 3px solid #d1c145;
     }
   }
 }
@@ -33,7 +33,7 @@ input {
 .input-highlight {
   @include fontCss();
   user-select: none;
-  border-top: 3px solid white;
+  border-top: 3px solid #d1c145;
   position: absolute;
   left: 0;
   bottom: 0;

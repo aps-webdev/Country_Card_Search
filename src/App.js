@@ -1,12 +1,10 @@
-import Card from "./component/card/card.index.js";
+import React from "react";
 import Countries from "./component/countries/countries.index.js";
-import Search from "./component/search/search.index.js";
 function App() {
   return (
-    <>
-      <Search />
-      <Card />
-    </>
+    <React.Fragment>
+      <Countries />
+    </React.Fragment>
   );
 }
 export default App;

@@ -2,32 +2,18 @@ import React, { Component } from "react";
 import "./search.styles.scss";
 
 export default class Search extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      inputValue: "",
-    };
-  }
-
-  onInputChange = (e) => {
-    this.setState({
-      inputValue: e.target.value,
-    });
-  };
 
   render() {
-    const { inputValue } = this.state;
     return (
       <div className="input-wrapper">
         <input
-          onChange={this.onInputChange}
+          onChange={this.props.onInputChange}
           placeholder="Search Country"
-          value={inputValue}
+          value={this.props.inputValue}
           spellCheck={false}
         />
         <span className="input-highlight">
-          {inputValue.replace(/ /g, "\u00a0")}
+          {this.props.inputValue.replace(/ /g, "\u00a0")}
         </span>
       </div>
     );
